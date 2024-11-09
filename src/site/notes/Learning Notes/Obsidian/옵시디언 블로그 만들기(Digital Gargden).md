@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/learning-notes/obsidian/digital-gargden/","created":"2024-11-09T13:26:20.867+09:00","updated":"2024-11-09T18:30:50.769+09:00"}
+{"dg-publish":true,"permalink":"/learning-notes/obsidian/digital-gargden/","created":"2024-11-09T13:26:20.867+09:00","updated":"2024-11-09T18:30:58.457+09:00"}
 ---
 
 # 옵시디언 블로그
