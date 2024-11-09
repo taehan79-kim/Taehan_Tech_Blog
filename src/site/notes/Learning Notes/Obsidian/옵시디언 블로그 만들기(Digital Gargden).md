@@ -1,14 +1,14 @@
 ---
-{"dg-publish":true,"permalink":"/learning-notes/obsidian/digital-gargden/","created":"2024-11-09T13:26:20.867+09:00","updated":"2024-11-09T18:31:03.284+09:00"}
+{"dg-publish":true,"permalink":"/learning-notes/obsidian/digital-gargden/","created":"2024-11-09T13:26:20.867+09:00","updated":"2024-11-09T18:54:03.898+09:00"}
 ---
 
-# 옵시디언 블로그
+# 💎옵시디언 블로그
 Obsidian은 마크다운을 기반으로 한 노트 작성 및 지식 관리 애플리케이션입니다. Digital Garden Plugin과 Obsidian, GitHub, Netlify를 활용하여 옵시디언 내 원하는 노트만을 웹사이트 블로그에 공개하는 법을 작성하였습니다. 
-# 준비물
+# 🛠️준비물
 1. Obsidian App 설치([Obsidian](https://obsidian.md/))
 2. GitHub 계정([GitHub](https://github.com/))
 3. Netlify 계정 연결([Netlify](https://www.netlify.com/))
-# 방법
+# 📃방법
 정적 웹사이트를 구축하는 데는 크게 3가지의 요소가 있습니다.
 Markdown Files, Static Site Generator, Hosting
 저는 Obsidian, Netlify, Github를 사용하였습니다.
