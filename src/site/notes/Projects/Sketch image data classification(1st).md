@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/projects/sketch-image-data-classification-1st/","created":"2024-11-09T19:00:30.487+09:00","updated":"2024-11-12T02:09:37.226+09:00"}
+{"dg-publish":true,"permalink":"/projects/sketch-image-data-classification-1st/","created":"2024-11-09T19:00:30.487+09:00","updated":"2024-11-12T02:21:29.718+09:00"}
 ---
 
 #naverboostcamp #ai_tech #computer_vision #classification
@@ -9,7 +9,7 @@
 - ImageNet Sketch 이미지 데이터 분류
 - 1st Prize 🏆
 - Naver Connect & Upstage 주관 대회
-- [main code](https://github.com/boostcampaitech7/level1-imageclassification-cv-18/blob/main/main)
+- [git](https://github.com/boostcampaitech7/level1-imageclassification-cv-18)
 ## 대회 소개
 ![image](https://github.com/user-attachments/assets/e889ae72-c64f-48bb-95f0-ce7c73d56e4c)
 
