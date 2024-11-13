@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/projects/recycling-waste-object-detection-2nd/","tags":["naverboostcamp","ai_tech","computer_vision","object_detection"],"created":"2024-11-12T02:10:04.243+09:00","updated":"2024-11-13T23:17:29.025+09:00"}
+{"dg-publish":true,"permalink":"/projects/recycling-waste-object-detection-2nd/","tags":["naverboostcamp","ai_tech","computer_vision","object_detection"],"created":"2024-11-12T02:10:04.243+09:00","updated":"2024-11-13T23:28:42.565+09:00"}
 ---
 
 ## 프로젝트 개요
@@ -15,7 +15,7 @@
 
 ## Leaderboard
 ![image](https://github.com/user-attachments/assets/a6e460ca-b192-4db5-b9e8-39f0f685b84c)
-	다양한 모델을 테스트하고 수많은 가설을 실험한 끝에, **mAP_50 0.7482**를 기록하며 **2위**의 성과를 달성했습니다. 최신 SOTA 모델인 **Co-DETR**부터 **ATSS**, **Faster R-CNN**, **DyHead**, **YOLO** 등 여러 모델을 시도했으며, 최종적으로 **앙상블**을 통해 성능을 극대화했습니다. 특히, 다양한 모델을 조합하여 앙상블하는 것이 성능 향상에 중요한 역할을 한다는 점을 깨달았습니다.
+	다양한 모델을 테스트하고 수많은 가설을 실험한 끝에, **mAP_50 0.7482**를 기록하며 **2위**의 성과를 달성했습니다. 최신 SOTA 모델인 **Co-DETR**부터 **ATSS**, **Faster R-CNN**, **DyHead**, **YOLO** 등 여러 모델을 시도했으며, 최종적으로 **앙상블**을 통해 성능을 극대화했습니다. 특히, 성능이 낮았던 YOLO 모델을 앙상블함으로써 성능을 극대화 할 수 있었습니다. 이로써, 다양한 모델을 조합하여 앙상블하는 것이 성능 향상에 중요한 역할을 한다는 점을 깨달았습니다. 
 	또한, 팀원들과의 협업 과정에서 **Git Issue**, **Pull Request**, **Project Table**을 적극적으로 활용하여 프로젝트 진행 상황을 체계적으로 관리했습니다. 이러한 협업 도구의 활용은 원활한 소통과 효율적인 업무 분배에 큰 도움이 되었고, 결과적으로 높은 성과로 이어질 수 있었습니다.
 ## 타임라인
 ![Pasted image 20241113223533.png](/img/user/Pasted%20image%2020241113223533.png)
@@ -109,6 +109,7 @@ Cascade R-CNN 모델의 **Backbone**으로 **ResNet50, Swin Transformer Small, S
 | -------- | ---------- | --------- | ---------------- |
 | **YOLOv5x6** | **1280**   | **209.8** | **55.0**         |
 | YOLOv11x | 640        | 194.9     | 54.7             |
+
 YOLO 모델을 선택할 때, **YOLOv5**와 **YOLOv11** 중 하나를 고려했습니다. **YOLOv11x**는 최신 모델로, 속도가 빠르고 상대적으로 낮은 **FLOPs**를 요구하는 장점이 있습니다. 하지만, 이번 대회의 목표는 **성능 우선**이었기 때문에, **속도**나 **경량화**보다는 **정확도**에 더 중점을 두기로 했습니다.
 
 이에 따라, **YOLOv5x6** 모델을 선택했습니다. YOLOv5x6는 **YOLOv11x**보다 **파라미터**가 약 2.5배 많아 속도는 느리지만, 높은 정확도를 보였습니다. 또한, **Image Size**를 **1024x1024**로 설정했을 때, **YOLOv5x6**가 더 적합하다고 판단하여 이를 모델로 채택하게 되었습니다.
@@ -130,6 +131,7 @@ YOLO 모델을 선택할 때, **YOLOv5**와 **YOLOv11** 중 하나를 고려했�
 | Co-DINO                  | Swin-L   | COCO                  | Train-Validation split |                        | 0.7170           | 0.7071     |
 | Co-DINO                  | Swin-L   | COCO                  | Train set            |                        | 0.7190           |            |
 | Co-DINO                  | Swin-L   | COCO                  | 5-fold CV            |                        | 0.7283           |            |
+
 실험 결과, 다양한 모델 중 **Co-DINO**가 가장 우수한 성능을 기록했습니다. Co-DINO 모델은 **Contrastive Denoising** 기법을 사용하여 효율적인 앵커 박스를 추출하고, 이를 통해 객체 검출 성능을 크게 향상시킬 수 있었습니다.
 
 또한, Backbone 모델 분석에서 **Swin-L**은 이전 실험 결과대로 Transformer 기반의 모델 중 가장 높은 성능을 보였습니다. 실험에서는 **COCO** 데이터셋으로 pre-training된 모델 가중치를 활용하였으며, 학습 데이터 분할 방식을 조정하면서 성능 변화를 비교했습니다.
@@ -176,6 +178,7 @@ Object Detection Task 에선 대표적으로 NMS, soft NMS, NMW, WBF 4가지의 
 | NMS    | o    |              |            | o       |          | 0.7217     |
 | NMW    | o    | o            |            | o       |          | 0.7327     |
 | NMW    | o    | o            |            | o       | o        | **0.7553**     |
+
 최종적으로 ATSS, Cascade RCNN, Co-DINO, YOLOv5x6을 NMW 기법으로 앙상블했을 때 가장 좋은 성능을 보였고, 그 결과 대회를 2등으로 마무리할 수 있었습니다. 흥미로운 점은 YOLOv5x6 모델의 성능이 다른 모델들에 비해 상대적으로 낮은 편이었지만, 앙상블을 적용했을 때 성능이 크게 향상되었다는 것입니다. YOLOv5x6 모델은 정확히 맞출 수 있는 객체에 대해서만 bounding box를 예측하는 경향이 있기 때문에, 앙상블 기법을 통해 서로 보완하는 효과가 나타나 더 높은 성능을 발휘할 수 있었습니다. 이 결과는 앙상블 기법이 각 모델의 강점을 결합하여 더 뛰어난 성능을 낼 수 있음을 잘 보여주었습니다.
 
 ## 개인 회고
