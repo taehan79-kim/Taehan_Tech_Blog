@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/projects/recycling-waste-object-detection-2nd/","tags":["naverboostcamp","ai_tech","computer_vision","object_detection"],"created":"2024-11-12T02:10:04.243+09:00","updated":"2024-11-13T23:28:42.565+09:00"}
+{"dg-publish":true,"permalink":"/projects/recycling-waste-object-detection-2nd/","tags":["naverboostcamp","ai_tech","computer_vision","object_detection"],"created":"2024-11-12T02:10:04.243+09:00","updated":"2024-11-25T11:48:13.504+09:00"}
 ---
 
 ## 프로젝트 개요
@@ -13,6 +13,14 @@
 ![image](https://github.com/user-attachments/assets/c3f7a3e7-dffc-427e-ac34-57b2c4659b21)
 재활용 품목 분류를 위한 Object Detection 모델 개발. 10종류의 쓰레기 품목 Object Detection 모델의 객체 탐지 성능 향상시키는 것을 목적으로 하는 대회입니다.
 
+## 개발 환경
+- Language : Python
+- Environment
+	- CPU : Intel(R) Xeon(R) Gold 5120
+	- GPU : Tesla V100-SXM2 32GB x 1
+- Framework : PyTorch
+- Collaborative Tool : GitHub, Tensorboard, Notion
+  
 ## Leaderboard
 ![image](https://github.com/user-attachments/assets/a6e460ca-b192-4db5-b9e8-39f0f685b84c)
 	다양한 모델을 테스트하고 수많은 가설을 실험한 끝에, **mAP_50 0.7482**를 기록하며 **2위**의 성과를 달성했습니다. 최신 SOTA 모델인 **Co-DETR**부터 **ATSS**, **Faster R-CNN**, **DyHead**, **YOLO** 등 여러 모델을 시도했으며, 최종적으로 **앙상블**을 통해 성능을 극대화했습니다. 특히, 성능이 낮았던 YOLO 모델을 앙상블함으로써 성능을 극대화 할 수 있었습니다. 이로써, 다양한 모델을 조합하여 앙상블하는 것이 성능 향상에 중요한 역할을 한다는 점을 깨달았습니다. 
