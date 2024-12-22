@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/learning-notes/docker/docker/","created":"2024-12-19T14:27:32.263+09:00","updated":"2024-12-20T03:56:11.371+09:00"}
+{"dg-publish":true,"permalink":"/learning-notes/docker/docker/","created":"2024-12-19T14:27:32.263+09:00","updated":"2024-12-23T00:57:34.355+09:00"}
 ---
 
 ## 도커 설명
@@ -26,7 +26,7 @@
 	- WSL2와 연동되어 사용하기 매우 편함
 - 도커 이미지 다운로드
 ```
-docker pull MySQL:8
+docker pull mysql:8
 # MySQL 8버젼의 이미지를 도커로 다운로드한다
 ```
 - 다운 받은 도커 이미지들 확인
@@ -35,6 +35,10 @@ docker images
 
 # REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
 # mysql        8         106d5197fd8e   2 months ago   816MB
+```
+- 다운받은 도커 이미지 삭제
+```
+docker rmi 106d5197fd8e # IMAGE ID
 ```
 - 도커 이미지를 사용해 도커 컨테이너를 만들고 실행하기
 ```
@@ -122,6 +126,10 @@ RUN pip install pip==23.0.1 && \
 ```
 CMD ["python", "main.py"]
 ```
+- EXPOSE : 컨테이너 외부에 노출할 포트 지정
+- ENTRYPOINT : 이미지를 컨테이너로 띄울 때 항상 실행하는 커맨드
+	- CMD : 실행 시점에 오버라이딩 가능
+	- ENTRYPOINT : 오버라이딩 불가능, 보안적인 면에서 더 안전 
 
 - 도커 이미지 빌드
 	- 태그 미 지정시 "latest"로 채워짐
@@ -131,3 +139,30 @@ docker build -t 02-docker:latest .
 # latest : 빌드할 이미지의 태그
 # . : 현재 폴더를 의미
 ```
+
+- 도커 이미지 컨테이너 실행
+```
+docker run 02-docker:latest
+```
+
+## 레지스트리에 도커 이미지 푸시
+- 컨테이너 레지스트리 : Dockerhub, GCP GCP, AWS ECR 등
+	- 지정하지 않으면 기본적으로 Dockerhub 사용
+
+- 도커 허브 계정 생성
+- CLI에 도커 계정 연동
+```
+docker login
+```
+- doker tag 설정
+	- docker tag "기존 이미지:태그" "새 이미지 이름:태그"
+	- 새 이미지 이름은 내 계정 ID/이미지 이름
+```
+docker tag 02-docker:latest xogks5479/02-docker:latest
+```
+- docker push
+	- docker push "이미지 이름:태그"
+```
+docker push xogks5479/02-docker:latest
+```
+- docker pull로 어디서든 다운로드 받을 수 있음
