@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/learning-notes/docker/docker/","created":"2024-12-19T14:27:32.263+09:00","updated":"2024-12-23T00:57:34.355+09:00"}
+{"dg-publish":true,"permalink":"/learning-notes/docker/docker/","created":"2024-12-19T14:27:32.263+09:00","updated":"2024-12-30T10:50:00.384+09:00"}
 ---
 
 ## 도커 설명
@@ -59,7 +59,7 @@ docker ps
 docker exec -it mysql-tutorial /bin/bash
 
 # mysql-tutorial : 자신의 컨테이너 이름(혹은 ID)
-# Ctrl + Q : 컨테이너 나가기
+# Ctrl + P, Ctrl + Q : 컨테이너 나가기
 ```
 - 도커 컨테이너 중지
 ```
