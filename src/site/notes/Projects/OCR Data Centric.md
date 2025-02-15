@@ -1,7 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/projects/ocr-data-centric/","created":"2024-11-25T11:09:06.427+09:00","updated":"2025-02-16T02:25:00.917+09:00"}
+{"dg-publish":true,"permalink":"/projects/ocr-data-centric/","created":"2024-11-25T11:09:06.427+09:00","updated":"2025-02-16T02:47:14.721+09:00"}
 ---
 
+#naverboostcamp #ai_tech #computer_vision #data_centric #ocr
 ## 프로젝트 개요
 - 2024.10.28 ~ 2024.11.7
 - 영수증 글자 인식을 위한 OCR 대회
@@ -114,6 +115,7 @@
 | -------- | -------------- |
 | 문장 데이터 X | 0.82           |
 | 문장 데이터 O | 0.88           |
+
 ### 데이터 전처리(이진화)
 - 문제 상황
 	- Train 데이터와 Test 데이터의 **그림자, 조명, 구겨짐** 등의 차이로 인해 Test 데이터셋에서 정확한 글자 영역 추출이 안되는 문제를 확인하였습니다.
