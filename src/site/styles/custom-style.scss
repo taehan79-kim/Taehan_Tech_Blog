@@ -34,8 +34,7 @@ body {
 
   .notelink {
     img {
-      height: 16px;
-      width: auto;
+      border-style: none;
     }
 
     margin-right: 8px;
@@ -252,7 +251,7 @@ body {
     i {
       cursor: pointer;
       height: 24px;
-      width: auto;
+      // width: auto;
     }
 
     #theme-switch {
