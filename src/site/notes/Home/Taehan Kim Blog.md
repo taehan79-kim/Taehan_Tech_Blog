@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/home/taehan-kim-blog/","tags":["gardenEntry"],"created":"2024-11-08T18:48:01.723+09:00","updated":"2025-02-15T06:16:46.197+09:00"}
+{"dg-publish":true,"permalink":"/home/taehan-kim-blog/","tags":["gardenEntry"],"created":"2024-11-08T18:48:01.723+09:00","updated":"2025-02-16T02:34:12.934+09:00"}
 ---
 
 ***팀과 함께 배우는 것을 즐기고 AI 기술을 통해 사람들의 일상에 가치를 더하는 것을 목표로 하는 개발자입니다.***
@@ -22,7 +22,10 @@
 
 | Project                                                                                   |
 | ----------------------------------------------------------------------------------------- |
-| ![image](https://github.com/user-attachments/assets/e889ae72-c64f-48bb-95f0-ce7c73d56e4c) |
-| [[Projects/Sketch image data classification(1st)\|Sketch image data classification(1st)]]                                                 |
+| ![Pasted_image_20250215211658.png](/img/user/Pasted_image_20250215211658.png)                                                      |
+| [[Projects/OCR Data Centric\|OCR Data Centric]]                                                                      |
 | ![image](https://github.com/user-attachments/assets/c3f7a3e7-dffc-427e-ac34-57b2c4659b21) |
 | [[Projects/Recycling Waste Object Detection(2nd)\|Recycling Waste Object Detection(2nd)]]                                                 |
+| ![image](https://github.com/user-attachments/assets/e889ae72-c64f-48bb-95f0-ce7c73d56e4c) |
+| [[Projects/Sketch image data classification(1st)\|Sketch image data classification(1st)]]                                                 |
+
