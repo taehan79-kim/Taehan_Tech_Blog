@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/projects/recycling-waste-object-detection-2nd/","tags":["naverboostcamp","ai_tech","computer_vision","object_detection"],"created":"2024-11-12T02:10:04.243+09:00","updated":"2024-11-25T11:48:13.504+09:00"}
+{"dg-publish":true,"permalink":"/projects/recycling-waste-object-detection-2nd/","tags":["naverboostcamp","ai_tech","computer_vision","object_detection"],"created":"2024-11-12T02:10:04.243+09:00","updated":"2025-02-15T18:25:20.875+09:00"}
 ---
 
 ## 프로젝트 개요
@@ -9,10 +9,12 @@
 - Naver Connect & Upstage 주관 대회
 - [git](https://github.com/boostcampaitech7/level2-objectdetection-cv-18)
 
+---
 ## 대회 소개
 ![image](https://github.com/user-attachments/assets/c3f7a3e7-dffc-427e-ac34-57b2c4659b21)
 재활용 품목 분류를 위한 Object Detection 모델 개발. 10종류의 쓰레기 품목 Object Detection 모델의 객체 탐지 성능 향상시키는 것을 목적으로 하는 대회입니다.
 
+---
 ## 개발 환경
 - Language : Python
 - Environment
@@ -20,14 +22,18 @@
 	- GPU : Tesla V100-SXM2 32GB x 1
 - Framework : PyTorch
 - Collaborative Tool : GitHub, Tensorboard, Notion
-  
+
+---
 ## Leaderboard
 ![image](https://github.com/user-attachments/assets/a6e460ca-b192-4db5-b9e8-39f0f685b84c)
 	다양한 모델을 테스트하고 수많은 가설을 실험한 끝에, **mAP_50 0.7482**를 기록하며 **2위**의 성과를 달성했습니다. 최신 SOTA 모델인 **Co-DETR**부터 **ATSS**, **Faster R-CNN**, **DyHead**, **YOLO** 등 여러 모델을 시도했으며, 최종적으로 **앙상블**을 통해 성능을 극대화했습니다. 특히, 성능이 낮았던 YOLO 모델을 앙상블함으로써 성능을 극대화 할 수 있었습니다. 이로써, 다양한 모델을 조합하여 앙상블하는 것이 성능 향상에 중요한 역할을 한다는 점을 깨달았습니다. 
 	또한, 팀원들과의 협업 과정에서 **Git Issue**, **Pull Request**, **Project Table**을 적극적으로 활용하여 프로젝트 진행 상황을 체계적으로 관리했습니다. 이러한 협업 도구의 활용은 원활한 소통과 효율적인 업무 분배에 큰 도움이 되었고, 결과적으로 높은 성과로 이어질 수 있었습니다.
-## 타임라인
-![Pasted image 20241113223533.png](/img/user/Pasted%20image%2020241113223533.png)
 
+---
+## 타임라인
+![Pasted_image_20241113223533.png](/img/user/Pasted_image_20241113223533.png)
+
+---
 ## 프로젝트 수행 절차 및 방법
 사진에서 **쓰레기를 탐지**하기 위해 **MMDetection 오픈소스 객체 탐지 라이브러리**를 활용하여 다양한 객체 탐지 모델을 실험하고 최적화했습니다. 여러 객체 탐지 모델을 **재활용 품목 분류 과제에 맞게 튜닝**하고 조합한 결과, 네이버 부스트캠프에서 개최한 **“재활용 품목 분류를 위한 Object Detection 대회**"에서 **mAP50 0.7482**를 기록하며 **2위**를 차지할 수 있었습니다.
 
@@ -41,17 +47,18 @@
 3. **MMDetection의 활용**  
     MMDetection 라이브러리를 통해 다양한 모델 구조와 기능을 효율적으로 적용할 수 있었으며, 이를 통해 실험 과정이 크게 최적화되었습니다.
 
+---
 ## 데이터 처리 및 EDA
 ### 1-1 데이터 분할
 모델 학습 과정에서 성능을 객관적으로 평가하기 위해 **학습 데이터셋**과 **검증 데이터셋**으로 데이터를 분할했습니다. 특히, 학습 데이터셋의 **클래스 분포 불균형** 문제를 해결하기 위해 **Stratified Group K-Fold** 방식을 적용하여 각 fold에서 클래스 분포가 균등해지도록 했습니다.
-![Pasted image 20241113224501.png](/img/user/Pasted%20image%2020241113224501.png)
+![Pasted_image_20241113224501.png](/img/user/Pasted_image_20241113224501.png)
 최종적으로 **Fold 1에 대해 실험을 진행해 성능을 측정**하고, 이 실험 결과를 모든 fold에 반영하여 **5-Fold 앙상블**로 최종 결과물을 도출했습니다. 이 과정에서 Stratified Group K-Fold 방식은 모델의 일반화 성능을 높이고, 더 일관된 평가를 가능하게 했습니다.
 
 이러한 접근은 데이터 분포를 효과적으로 반영하며 최종 성능을 극대화하는 데 큰 도움이 되었습니다.
 
 ### 1-2 Anchor box 
 - 클래스별 bounding box aspect ratio
-![Pasted image 20241113224624.png](/img/user/Pasted%20image%2020241113224624.png)
+![Pasted_image_20241113224624.png](/img/user/Pasted_image_20241113224624.png)
 모델 성능을 극대화하기 위해, 주어진 데이터에서 **각 클래스의 bounding box aspect ratio를 시각화하여 분석**했습니다. 이를 통해 모든 클래스에서 객체의 aspect ratio가 **Q1-Q3 범위 내 [0.4725, 2.1209]**에 분포하는 것을 확인할 수 있었습니다.
 
 이 분석을 바탕으로 **데이터셋에 최적화된 anchor box ratio를 설정**하여, 객체 탐지 성능을 향상시키고 불필요한 anchor의 사용을 최소화했습니다. 이를 통해 anchor가 각 객체의 크기와 형태에 보다 잘 맞도록 조정함으로써, 모델의 학습 효율을 높일 수 있었습니다.
@@ -59,13 +66,14 @@
 객체 탐지 작업에서 anchor 설정의 중요성을 다시금 실감한 경험이었으며, 앞으로도 데이터 분포에 맞는 anchor 최적화를 적극적으로 고려할 계획입니다.
 
 ### 모델 Predictions bounding box 및 PR 곡선 시각화
-![Pasted image 20241113224744.png](/img/user/Pasted%20image%2020241113224744.png)
+![Pasted_image_20241113224744.png](/img/user/Pasted_image_20241113224744.png)
 모델의 성능을 직관적으로 평가하기 위해 **검증 데이터셋에 대해 Prediction bounding box와 Ground Truth bounding box, 그리고 PR (Precision-Recall) 곡선을 시각화**했습니다. 이를 통해 **모델의 성능을 시각적으로 확인**하고, 모델의 약점을 파악할 수 있었습니다.
 
 시각화 결과, 모델이 **작은 객체(General trash)**에 대해서는 localization 성능이 떨어지고, **겹쳐 있는 객체(Plastic)**에 대해서는 classification 성능이 저하되는 경향을 확인할 수 있었습니다.
 
 이러한 분석을 통해 모델의 취약점을 구체적으로 파악하고, 이후 성능 개선을 위한 전략을 수립할 수 있는 중요한 인사이트를 얻을 수 있었습니다. 앞으로도 시각적 분석을 통해 모델의 성능을 다각도로 평가하고 최적화할 계획입니다.
 
+---
 ## MMdetection
 ### baseline 모델 탐색
 베이스라인 초기 실험에서는 **MMDetection 라이브러리**를 활용하여 다양한 객체 탐지 모델들의 성능을 비교했습니다. **Fold 1 데이터셋**을 사용하여 실험을 진행했으며, 이를 통해 각 모델의 초기 성능을 확인할 수 있었습니다.
@@ -80,6 +88,7 @@
 | UniverseNet   | SwinL    | FPN  | AdamW     | 0.0001 | 20    | 0.5545     |
 | RetinaNet     | SwinL    | FPN  | AdamW     | 0.0001 | 20    | 0.5438     |
 | VFNet         | SwinL    | FPN  | AdamW     | 0.0001 | 20    | 0.5623     |
+
 ### Backbone 탐색
 Cascade R-CNN 모델의 **Backbone**으로 **ResNet50, Swin Transformer Small, Swin Transformer Large**를 사용하여 성능을 비교했습니다.
 
@@ -95,8 +104,9 @@ Cascade R-CNN 모델의 **Backbone**으로 **ResNet50, Swin Transformer Small, S
 | Cascade R-CNN | ResNet50 | 0.3613     |
 | Cascade R-CNN | SwinS    | 0.4628     |
 | Cascade R-CNN | SwinL    | 0.5161     |
+
 ### 결과
-![Pasted image 20241113225944.png](/img/user/Pasted%20image%2020241113225944.png)
+![Pasted_image_20241113225944.png](/img/user/Pasted_image_20241113225944.png)
 객체 탐지 성능을 높이기 위해 **다양한 모델 구조와 Backbone, Neck** 조합을 시도하고, **하이퍼파라미터 튜닝** 및 **데이터 증강 기법**을 변경하며 성능 변화를 분석했습니다. 각 조합이 성능에 미친 영향을 요약한 결과는 다음과 같습니다.
 
 - **강력한 Backbone과 Multi-scale 기법**의 조합이 높은 성능을 보였습니다. 특히, **Swin Transformer** 같은 강력한 Backbone을 사용하는 모델은 복잡한 데이터를 더욱 효과적으로 학습할 수 있었습니다.
@@ -110,6 +120,7 @@ Cascade R-CNN 모델의 **Backbone**으로 **ResNet50, Swin Transformer Small, S
 
 이 실험을 통해 최적의 조합을 찾아가는 과정이 성능 향상에 매우 중요함을 실감할 수 있었으며, 데이터 특성에 맞는 Backbone과 증강 기법을 선택하는 것이 성능 향상에 효과적임을 검증했습니다.
 
+---
 ## Yolo
 **YOLO (You Only Look Once)**는 객체 탐지에서 널리 사용되는 모델로, 이미지 내의 객체를 한 번의 전방향 패스(forward pass)만으로 탐지하는 1-Stage 모델입니다. 다른 전통적인 객체 탐지 방식들은 객체를 여러 단계에 걸쳐 탐지하지만, YOLO는 이를 동시에 처리하는 특징을 가집니다. 이 방식은 **속도**와 **효율성**을 크게 향상시켜 실시간 객체 탐지에 적합합니다.
 ### baseline 모델 탐색
@@ -159,10 +170,13 @@ YOLO 모델을 선택할 때, **YOLOv5**와 **YOLOv11** 중 하나를 고려했�
 | Co-DINO | Swin-T   | Train-validation split | (1536, 1536)     | 0.0720           |            |
 | Co-DINO | Swin-L   | Train set              | (512, 512)       |                  | 0.6686     |
 | Co-DINO | Swin-L   | Train set              | **(1280, 1280)** |                  | **0.7790** |
+
+
 다양한 실험을 통해 입력 이미지의 크기가 클수록 해상도가 높아져 더 많은 객체를 탐지할 수 있다는 사실을 확인한 바 있습니다. 이를 Co-DINO 모델에 적용하여 다양한 입력 이미지 크기에서의 성능을 확인해본 결과, 이미지 크기가 원본보다 작을수록 정보 손실이 발생하여 성능이 떨어짐을 확인할 수 있었습니다. 그러나 입력 이미지 크기를 1280x1280 이상으로 늘렸을 때는 오히려 성능이 감소하는 현상을 발견했습니다.
 
 그 이유는, 특정 크기 이상의 이미지에서는 backbone 모델의 윈도우 크기 및 모델 아키텍처의 구조 상, 이미지에서 추출할 수 있는 feature 정보가 제대로 뽑히지 않기 때문으로 예상됩니다. 이는 큰 이미지 크기에서 모델이 다룰 수 있는 feature 맵의 크기나 계산 효율성에 한계가 있기 때문으로 보이며, 이를 통해 적절한 이미지 크기의 선택이 모델 성능에 중요한 영향을 미친다는 점을 확인할 수 있었습니다.
 
+---
 ### 최종 성능
 | Model            | Backbone | Pretraining Dataset | Fine-Tuning Dataset              | Input image size | validation mAP50 | test mAP50 |
 | ---------------- | -------- | ------------------- | -------------------------------- | ---------------- | ---------------- | ---------- |
@@ -174,6 +188,8 @@ YOLO 모델을 선택할 때, **YOLOv5**와 **YOLOv11** 중 하나를 고려했�
 | Co-DINO          | Swin-L   | COCO                | Train set                        | (512, 512)       | -                | 0.6686     |
 | Co-DINO          | Swin-L   | COCO                | Train set                        | (1280, 1280)     | -                | 0.7190     |
 | Co-DINO          | Swin-L   | COCO                | 5-fold CV                        | (1280, 1280)     | -                | **0.7283** |
+
+---
 ## 앙상블
 Object Detection Task 에선 대표적으로 NMS, soft NMS, NMW, WBF 4가지의 앙상블 기법이있다. 간단한 기본 모델에 대해서 각 앙상블의 성능을 평가한 뒤, 결과가 좋았던 앙상블 기법으로 최종 결과물을 만들었다.
 
@@ -187,8 +203,10 @@ Object Detection Task 에선 대표적으로 NMS, soft NMS, NMW, WBF 4가지의 
 | NMW    | o    | o            |            | o       |          | 0.7327     |
 | NMW    | o    | o            |            | o       | o        | **0.7553**     |
 
+
 최종적으로 ATSS, Cascade RCNN, Co-DINO, YOLOv5x6을 NMW 기법으로 앙상블했을 때 가장 좋은 성능을 보였고, 그 결과 대회를 2등으로 마무리할 수 있었습니다. 흥미로운 점은 YOLOv5x6 모델의 성능이 다른 모델들에 비해 상대적으로 낮은 편이었지만, 앙상블을 적용했을 때 성능이 크게 향상되었다는 것입니다. YOLOv5x6 모델은 정확히 맞출 수 있는 객체에 대해서만 bounding box를 예측하는 경향이 있기 때문에, 앙상블 기법을 통해 서로 보완하는 효과가 나타나 더 높은 성능을 발휘할 수 있었습니다. 이 결과는 앙상블 기법이 각 모델의 강점을 결합하여 더 뛰어난 성능을 낼 수 있음을 잘 보여주었습니다.
 
+---
 ## 개인 회고
 **프로젝트에 앞선 학습 목표**
 
