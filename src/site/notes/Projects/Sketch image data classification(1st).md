@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/projects/sketch-image-data-classification-1st/","created":"2024-11-09T19:00:30.487+09:00","updated":"2025-02-15T18:12:38.730+09:00"}
+{"dg-publish":true,"permalink":"/projects/sketch-image-data-classification-1st/","created":"2024-11-09T19:00:30.487+09:00","updated":"2025-02-15T18:18:03.484+09:00"}
 ---
 
 #naverboostcamp #ai_tech #computer_vision #classification
@@ -76,13 +76,13 @@ Sketch 이미지 분류 경진대회는 주어진 Sketch 이미지 데이터를 
 	- Curriculum learning
 		- 초기 단계(0~5 epoch) : 기본 이미지
 			- 스케치 데이터의 기본 패턴을 학습하는데 집중하기 위해, 증강 없이 학습을 진행
-			 !![image-5epoch.png|center|300](/img/user/Pasted_image_20241111224327.png)
+			 ![image-5epoch.png|center|100](/img/user/Pasted_image_20241111224327.png)
 		- 중간 단계(5~10 epoch) : 수직/수평 뒤집기, 최대 10도 회전
 			- 모델이 다양한 구도에 적응할 수 있도록, 수직/수평 뒤집기와 10도 회전 같은 간단한 증강을 추가
-			!![image_vertical.png|center|300](/img/user/Pasted_image_20241111224348.png)
+			![image_vertical.png|center|100](/img/user/Pasted_image_20241111224348.png)
 		- 후반 단계(10~20 epoch) : 수직/수평 뒤집기, 최대 15도 회전, Elastic 변형, Grid Distortion
 			- 모델이 다양한 변형과 왜곡에 강한 일반화 성능을 가질 수 있도록 Elastic 변형과 Grid Distortion 같은 고난이도 증강 추가
-			  ![image-distortion.png|center|300](/img/user/Pasted_image_20241111224405.png)
+			  ![image-distortion.png|center|100](/img/user/Pasted_image_20241111224405.png)
 - **결과 분석 2** : 
 	![Pasted_image_20241111225000.png](/img/user/Pasted_image_20241111225000.png)
 	- 증강이 복잡해질 때마다, 정확도가 떨어지고 다시 올라가는 과정에서 모델이 보다 복잡한 패턴 학습
