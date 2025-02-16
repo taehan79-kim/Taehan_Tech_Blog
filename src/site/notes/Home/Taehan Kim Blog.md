@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/home/taehan-kim-blog/","tags":["gardenEntry"],"created":"2024-11-08T18:48:01.723+09:00","updated":"2025-02-16T02:34:12.934+09:00"}
+{"dg-publish":true,"permalink":"/home/taehan-kim-blog/","tags":["gardenEntry"],"created":"2024-11-08T18:48:01.723+09:00","updated":"2025-02-17T01:47:59.621+09:00"}
 ---
 
 ***팀과 함께 배우는 것을 즐기고 AI 기술을 통해 사람들의 일상에 가치를 더하는 것을 목표로 하는 개발자입니다.***
@@ -22,6 +22,8 @@
 
 | Project                                                                                   |
 | ----------------------------------------------------------------------------------------- |
+| ![Pasted image 20250216154303.png](/img/user/Pasted%20image%2020250216154303.png)                                                      |
+| [[Projects/기업 해커톤, StockSense (AI 스마트 재고 관리 솔루션)\|기업 해커톤, StockSense (AI 스마트 재고 관리 솔루션)]]                                                 |
 | ![Pasted_image_20250215211658.png](/img/user/Pasted_image_20250215211658.png)                                                      |
 | [[Projects/OCR Data Centric\|OCR Data Centric]]                                                                      |
 | ![image](https://github.com/user-attachments/assets/c3f7a3e7-dffc-427e-ac34-57b2c4659b21) |
