@@ -1,8 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/learning-notes/paper-review/re-act-synergizing-reasoning-and-acting-in-language-models/","created":"2025-01-16T11:02:17.369+09:00","updated":"2025-02-16T17:50:50.929+09:00"}
+{"dg-publish":true,"permalink":"/learning-notes/paper-review/re-act-synergizing-reasoning-and-acting-in-language-models/","created":"2025-01-16T11:02:17.369+09:00","updated":"2025-02-16T21:07:07.948+09:00"}
 ---
 
 ![Pasted_image_20250116110344.png](/img/user/Pasted_image_20250116110344.png) 
+[ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)
+
 해당 논문은 ICLR 2023에서 발표되었으며 2025.02.16 기준 2207회 인용된 논문이다. 위 논문을 읽게 된 이유는 최종 해커톤 프로젝트에 적용할 자동 주문 Agent기능에서 AI Agent 기술의 적용할 방법론을 찾던 중 Agent의 기초가 되었던 방법론 논문 중 하나였기 떄문이다.
 
 ---
