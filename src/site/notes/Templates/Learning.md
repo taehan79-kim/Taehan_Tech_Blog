@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/learning-notes/obsidian//","created":"2024-11-09T13:26:20.867+09:00","updated":"2024-11-12T02:19:56.025+09:00"}
+{"dg-publish":true,"permalink":"/templates/learning/","created":"2024-11-25T10:54:37.001+09:00","updated":"2024-11-12T02:19:56.025+09:00"}
 ---
 
 #obsidian #learning #digital_garden #blog

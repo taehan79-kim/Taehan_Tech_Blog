@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/troubleshooting-and-debugging/recursion-error/","created":"2024-11-20T17:11:23.179+09:00","updated":"2024-11-23T19:42:00.344+09:00"}
+{"dg-publish":true,"permalink":"/troubleshooting-and-debugging/recursion-error/","created":"2024-11-20T17:11:23.179+09:00","updated":"2025-02-15T18:06:37.948+09:00"}
 ---
 
-## 에러 화면![Pasted image 20241120171250.png](/img/user/Pasted%20image%2020241120171250.png)
+## 에러 화면![Pasted_image_20241120171250.png](/img/user/Pasted_image_20241120171250.png)
 ## 에러 발생 과정
 - Hand Bone SemanticSegmentation project 진행 중 u3+ 모델 구조에서 backbone을 resnet50에서 EfficientNet-b0으로 바꿔서 학습을 진행하던 중 원래 잘 돌아가던 train 코드에서 save model함수를 실행하는 과정에서 에러가 발생하였습니다. 
 ## 에러 발생 이유
@@ -32,5 +32,5 @@
 ```
 - 해결
 	- 모델의 가중치만 저장하는 방식으로 전환해서 해결하였습니다.
-	- ![Pasted image 20241123192606.png](/img/user/Pasted%20image%2020241123192606.png)
-	- ![Pasted image 20241123192538.png](/img/user/Pasted%20image%2020241123192538.png)
+	- ![Pasted_image_20241123192606.png](/img/user/Pasted_image_20241123192606.png)
+	- ![Pasted_image_20241123192538.png](/img/user/Pasted_image_20241123192538.png)

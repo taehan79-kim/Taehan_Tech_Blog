@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/learning-notes/docker/docker-image-size/","created":"2024-12-23T00:57:40.929+09:00","updated":"2024-12-23T02:17:57.183+09:00"}
+{"dg-publish":true,"permalink":"/learning-notes/docker/docker-image-size/","created":"2024-12-23T00:57:40.929+09:00","updated":"2024-12-23T02:31:15.042+09:00"}
 ---
 
 ## Docker Image가 클 때의 문제점
@@ -24,7 +24,7 @@
 		- 표준 이미지 : python:3.9
 		- 슬림 이미지 : python:3.9-slim : 슬림한 데비안 이미지 기반, Production 환경에 적합
 		- 알파인 이미지 : python3.9-alpine : Alpine Linux 기반으로 사용, 작은 크기, 종속성은 수동 설치해야 할 수도 있음
-- Multi Stage Build 활용하기
+- **Multi Stage Build** 활용하기
 	- 도커 이미지를 효율적으로 작성하고 최적화하기 위한 방법
 	- 빌드에는 필요하지만 최종 컨테이너 이미지에는 필요없는 내용들을 제외시키면서 이미지를 생성하는 방법
 	- 하나의 도커 파일에 여러 이미지를 빌드하여 사용

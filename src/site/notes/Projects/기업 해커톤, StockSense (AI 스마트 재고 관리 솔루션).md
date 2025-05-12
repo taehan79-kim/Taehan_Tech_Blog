@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/projects/stock-sense-ai/","created":"2025-02-16T15:21:09.018+09:00","updated":"2025-02-16T15:54:17.956+09:00"}
+{"dg-publish":true,"permalink":"/projects/stock-sense-ai/","created":"2025-02-16T15:21:09.018+09:00","updated":"2025-02-17T01:47:38.063+09:00"}
 ---
 
 ## 프로젝트 개요
@@ -44,7 +44,6 @@
     - 데이터셋은 Dacon[온라인 채널 제품 판매량 예측 AI 온라인 해커톤]의 시계열 학습 데이터셋과 실제 Amazon.com에서 사용하는 Amazon Categories 상품명의 9500개의 taxonomy를 활용해 서비스 완성도를 높였다.
     - Database tool은 Supabase를 통한 PostgreSQL을 활용해 네트워크 원격 접속 및 다중 사용자가 동시에 데이터베이스에 접근하고 수정이 가능하도록 관리했다.
 - 우리 프로젝트의 전체흐름은 아래와 같다.
-![Pasted image 20250216154402.png](/img/user/Pasted%20image%2020250216154402.png)
 ### Trend Searching Workflow
 
 Naver Datalab에서 실시간 트렌드 상품을 불러와 자동 주문에 요청되는 상품을 파악하기 위한 Workflow이다.
